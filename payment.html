@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Invoice — Vanguard Home Service LLC Charleston SC</title>
+  <meta name="description" content="Pay your Vanguard Home Service invoice securely online. Questions? Call 843-278-8997 or email Service@vanguardhsllc.com.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="concept-banner">
+    📋 This is a free concept redesign — Vanguard Home Service LLC's actual site is at <a href="https://www.vanguardhsllc.com">vanguardhsllc.com</a>
+  </div>
+
+  <nav>
+    <div class="nav-top">
+      <a href="index.html" class="nav-logo-main">Vanguard</a>
+      <div class="nav-logo-sub">Home Service LLC &nbsp;·&nbsp; VHS &nbsp;·</div>
+    </div>
+    <div class="nav-bottom">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service-plans.html">Service Plans</a></li>
+        <li><a href="commercial.html">Commercial</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-phone"><a href="tel:8432788997">843-278-8997</a></div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service-plans.html">Service Plans</a></li>
+        <li><a href="commercial.html">Commercial</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:8432788997">📞 843-278-8997</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="eyebrow">Secure Payment</p>
+    <h1>Pay Your Invoice</h1>
+    <div class="gold-divider"></div>
+    <p>Enter your invoice details below to complete your payment securely.</p>
+  </div>
+
+  <section style="padding: 80px 24px; background: var(--bg);">
+    <div class="section-inner">
+      <div style="max-width: 520px; margin: 0 auto;">
+
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label for="work-order">Work Order / Invoice Number</label>
+            <input type="text" id="work-order" name="work-order" placeholder="e.g. VHS-2024-001">
+          </div>
+          <div class="form-group">
+            <label for="p-name">Your Name</label>
+            <input type="text" id="p-name" name="p-name" placeholder="Full name as on invoice">
+          </div>
+          <div class="form-group">
+            <label for="p-email">Email Address</label>
+            <input type="email" id="p-email" name="p-email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="p-amount">Invoice Amount ($)</label>
+            <input type="number" id="p-amount" name="p-amount" placeholder="0.00" step="0.01" min="0">
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%; margin-top:8px;">Pay Now</button>
+        </form>
+
+        <div style="margin-top: 28px; padding: 20px 24px; background: var(--navy); border: 1px solid var(--gold-border); border-radius: 4px;">
+          <p style="font-size: 13px; color: var(--muted2); text-align: center; margin-bottom: 10px; letter-spacing: 0.04em;">
+            🔒 Payment processed securely. We never store your card information.
+          </p>
+          <p style="font-size: 13px; color: var(--muted2); text-align: center;">
+            Questions about your invoice? Call <a href="tel:8432788997" style="color:var(--gold); text-decoration:none;">843-278-8997</a> or email <a href="mailto:Service@vanguardhsllc.com" style="color:var(--gold); text-decoration:none;">Service@vanguardhsllc.com</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo-main" style="font-size:22px;">Vanguard</a>
+          <p>Premier appliance repair for the Lowcountry. Factory-trained on all major brands. Licensed, insured, and backed by a 90-day warranty.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service-plans.html">Service Plans</a></li>
+            <li><a href="commercial.html">Commercial</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="payment.html">Pay Invoice</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-info">
+          <h4>Contact</h4>
+          <p><a href="tel:8432788997">843-278-8997</a></p>
+          <p><a href="mailto:Service@vanguardhsllc.com">Service@vanguardhsllc.com</a></p>
+          <p style="margin-top:12px;">Mon–Sat 8am–6pm<br>Emergency: 24/7</p>
+          <p style="margin-top:12px;">Charleston, SC &amp; Lowcountry</p>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <span>© 2026 Vanguard Home Service LLC. All rights reserved.</span>
+        <span><a href="tel:8432788997">843-278-8997</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
