@@ -3,184 +3,615 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vanguard Home Service LLC — Appliance Repair in Charleston, SC</title>
+  <title>Vanguard Home Service LLC — Appliance Repair Charleston SC</title>
   <meta name="description" content="Premier authorized appliance repair in Charleston and the Lowcountry. Factory-trained on all major brands including Dacor and Speed Queen. Call 843-278-8997.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07101f;
+      --navy: #0b1929;
+      --navy-light: #0f2035;
+      --gold: #c9a84c;
+      --gold-light: #e2c070;
+      --gold-pale: rgba(201,168,76,0.12);
+      --gold-border: rgba(201,168,76,0.22);
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.62);
+      --muted2: rgba(255,255,255,0.38);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; }
+
+    /* ── CONCEPT BANNER ── */
+    .concept-banner {
+      background: var(--gold);
+      color: #07101f;
+      text-align: center;
+      padding: 9px 20px;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    .concept-banner a { color: #07101f; text-decoration: underline; font-weight: 700; }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 28px 24px 0;
+      text-align: center;
+    }
+
+    .header-logo {
+      display: inline-block;
+      margin-bottom: 18px;
+    }
+    .header-logo img {
+      height: 120px;
+      width: auto;
+      display: block;
+    }
+
+    .header-contact {
+      margin-bottom: 16px;
+    }
+    .header-phone {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .header-email {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .header-social {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .header-social a { color: var(--muted); transition: color 0.15s; display: flex; align-items: center; gap: 6px; }
+    .header-social a:hover { color: var(--gold); }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      border-top: 1px solid var(--gold-border);
+      background: var(--bg);
+      flex-wrap: wrap;
+    }
+    nav a {
+      display: block;
+      padding: 14px 22px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    nav a:hover { color: var(--gold); }
+    nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
+    nav a.nav-cta {
+      background: var(--gold);
+      color: var(--bg);
+      margin-left: 12px;
+      border-bottom: 2px solid transparent;
+      border-radius: 2px;
+      padding: 10px 20px;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-size: 11px;
+    }
+    nav a.nav-cta:hover { background: var(--gold-light); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 80px 24px 72px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 7vw, 80px);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+    .hero-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bg);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+    .hero-btn:hover { background: var(--gold-light); }
+
+    /* ── PREMIER PROVIDERS ── */
+    .premier-section {
+      background: var(--bg);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .premier-eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      margin-bottom: 40px;
+    }
+    .premier-cards {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .premier-card {
+      background: var(--navy);
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      padding: 32px 48px;
+      min-width: 240px;
+    }
+    .premier-card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .premier-card-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted2);
+    }
+    .brand-list-text {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+      line-height: 2;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--navy-light);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 20px 24px;
+    }
+    .trust-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .trust-check { color: var(--gold); }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 72px 24px;
+    }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-eyebrow {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .gold-rule {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 48px;
+    }
+
+    /* ── WHY CARDS ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .why-card {
+      background: var(--navy);
+      border: 1px solid var(--gold-border);
+      border-radius: 4px;
+      padding: 32px 28px;
+    }
+    .why-icon { font-size: 24px; margin-bottom: 14px; }
+    .why-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .why-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ── SERVICE AREA ── */
+    .area-section {
+      background: var(--navy);
+      border-top: 1px solid var(--gold-border);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .area-inner { max-width: 800px; margin: 0 auto; }
+    .area-sub {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .cities-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .city-chip {
+      background: var(--bg);
+      border: 1px solid var(--gold-border);
+      border-radius: 3px;
+      padding: 7px 16px;
+      font-size: 12.5px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: var(--gold);
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .cta-strip h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bg);
+      margin-bottom: 8px;
+    }
+    .cta-strip p { color: rgba(7,16,31,0.68); font-size: 15px; margin-bottom: 24px; }
+    .cta-strip .cta-phone {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 600;
+      color: var(--bg);
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+      transition: opacity 0.15s;
+    }
+    .cta-strip .cta-phone:hover { opacity: 0.75; }
+    .cta-strip .cta-btn {
+      display: inline-block;
+      background: var(--bg);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+    .cta-strip .cta-btn:hover { background: var(--navy); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--gold-border);
+      padding: 52px 24px 28px;
+    }
+    .footer-inner { max-width: 1000px; margin: 0 auto; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 36px;
+    }
+    .footer-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .footer-brand p { font-size: 13.5px; color: var(--muted); line-height: 1.75; }
+    footer h4 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    footer ul li a { font-size: 13.5px; color: var(--muted); transition: color 0.15s; }
+    footer ul li a:hover { color: var(--gold); }
+    .footer-info p { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+    .footer-info a { color: var(--gold); }
+    .footer-divider { border: none; border-top: 1px solid var(--gold-border); margin: 0 0 22px; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--muted2);
+      letter-spacing: 0.04em;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom a { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { gap: 0; }
+      nav a { padding: 12px 14px; font-size: 10.5px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .premier-cards { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
-  <div class="concept-banner">
-    📋 This is a free concept redesign — Vanguard Home Service LLC's actual site is at <a href="https://www.vanguardhsllc.com">vanguardhsllc.com</a>
+<div class="concept-banner">
+  📋 This is a free concept redesign — Vanguard Home Service LLC's actual site is at <a href="https://www.vanguardhsllc.com" target="_blank">vanguardhsllc.com</a>
+</div>
+
+<div class="site-header">
+  <a href="index.html" class="header-logo">
+    <img src="Vanguard-logo.avif" alt="Vanguard Home Service LLC">
+  </a>
+  <div class="header-contact">
+    <a href="tel:8432788997" class="header-phone">843-278-8997</a>
+    <a href="mailto:Service@vanguardhsllc.com" class="header-email">Service@vanguardhsllc.com</a>
   </div>
+  <div class="header-social">
+    <a href="#">&#9426; Connect with us</a>
+    <a href="#">&#9733; Leave us a review</a>
+  </div>
+</div>
 
-  <nav>
-    <div class="nav-top">
-      <a href="index.html" class="nav-logo-link"><img src="Vanguard-logo.avif" alt="Vanguard Home Service LLC" class="nav-logo-img"></a>
-    </div>
-    <div class="nav-bottom">
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="service-plans.html">Service Plans</a></li>
-        <li><a href="commercial.html">Commercial</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav-phone"><a href="tel:8432788997">843-278-8997</a></div>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="service-plans.html">Service Plans</a></li>
-        <li><a href="commercial.html">Commercial</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="tel:8432788997">📞 843-278-8997</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="service-plans.html">Service Plans</a>
+  <a href="commercial.html">Commercial</a>
+  <a href="payment.html">Payment</a>
+  <a href="about.html">About Us</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="contact.html">Contact</a>
+  <a href="tel:8432788997" class="nav-cta">843-278-8997</a>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <p class="hero-eyebrow">Charleston's Premier Appliance Repair</p>
-    <h1>Appliance Repair<br>Experts</h1>
-    <p class="hero-sub">Trusted service for all major brands. Premier authorized provider for Dacor &amp; Speed Queen. Serving the Lowcountry since 2019.</p>
-    <div class="hero-ctas">
-      <a href="contact.html" class="btn-gold">Schedule Service Now</a>
-      <a href="service-plans.html" class="btn-outline-gold">View Service Plans</a>
-    </div>
-    <a href="tel:8432788997" class="hero-phone">843-278-8997</a>
-  </section>
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">Charleston's Premier Appliance Repair</p>
+  <h1>Appliance Repair<br>Experts</h1>
+  <p class="hero-sub">Trusted service for all major brands. Premier authorized provider for Dacor &amp; Speed Queen. Serving the Lowcountry since 2019.</p>
+  <a href="contact.html" class="hero-btn">Schedule Service Now</a>
+</div>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-inner">
-      <div class="trust-item"><span class="trust-check">✦</span> Licensed &amp; Insured</div>
-      <div class="trust-item"><span class="trust-check">✦</span> 90-Day Warranty</div>
-      <div class="trust-item"><span class="trust-check">✦</span> Same-Day Available</div>
+<!-- PREMIER PROVIDERS -->
+<div class="premier-section">
+  <p class="premier-eyebrow">We Service All Major Brands</p>
+  <div class="premier-cards">
+    <div class="premier-card">
+      <div class="premier-card-name">Dacor</div>
+      <div class="premier-card-label">Premier Service Provider</div>
+    </div>
+    <div class="premier-card">
+      <div class="premier-card-name" style="font-family:'Cormorant Garamond',serif;font-style:italic;">Speed Queen</div>
+      <div class="premier-card-label">Premier Service Provider</div>
     </div>
   </div>
+  <p class="brand-list-text">Whirlpool &nbsp;&middot;&nbsp; GE &nbsp;&middot;&nbsp; Samsung &nbsp;&middot;&nbsp; Bosch &nbsp;&middot;&nbsp; Thermador &nbsp;&middot;&nbsp; Sub-Zero &nbsp;&middot;&nbsp; LG &nbsp;&middot;&nbsp; Cove &nbsp;&middot;&nbsp; Frigidaire</p>
+  <a href="contact.html" class="hero-btn">Schedule Service Now</a>
+</div>
 
-  <!-- PREMIER PROVIDERS -->
-  <section style="padding: 80px 24px; background: var(--bg);">
-    <div class="section-inner" style="text-align:center;">
-      <p class="section-eyebrow">Authorized Service</p>
-      <h2 class="section-title">Premier Service Providers</h2>
-      <div class="gold-divider"></div>
-      <div class="premier-grid">
-        <div class="premier-card">
-          <div class="brand-name">Dacor</div>
-          <div class="badge-text">Premier Service Provider</div>
-        </div>
-        <div class="premier-card">
-          <div class="brand-name">Speed Queen</div>
-          <div class="badge-text">Premier Service Provider</div>
-        </div>
-      </div>
-      <p class="brand-list">Whirlpool &nbsp;·&nbsp; GE &nbsp;·&nbsp; Samsung &nbsp;·&nbsp; Bosch &nbsp;·&nbsp; Thermador &nbsp;·&nbsp; Sub-Zero &nbsp;·&nbsp; LG &nbsp;·&nbsp; Cove &nbsp;·&nbsp; Frigidaire</p>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section style="padding: 80px 24px; background: var(--navy); border-top: 1px solid var(--gold-border); border-bottom: 1px solid var(--gold-border);">
-    <div class="section-inner">
-      <p class="section-eyebrow">Why Vanguard</p>
-      <h2 class="section-title">Built on a Higher Standard</h2>
-      <div class="gold-divider" style="margin: 0 0 48px;"></div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">🏅</div>
-          <h3>Certified Experts</h3>
-          <p>Factory-trained technicians on all major brands including luxury appliances. We know your machine — not just the basics.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">💬</div>
-          <h3>Transparent Pricing</h3>
-          <p>Upfront estimates before any work begins. No surprise charges. You approve the repair before we touch anything.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">🛡️</div>
-          <h3>Guaranteed Work</h3>
-          <p>90-day warranty on every repair — parts and labor. If the same issue returns, we come back at no charge.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICE AREA -->
-  <section style="padding: 80px 24px; background: var(--bg);">
-    <div class="section-inner">
-      <p class="section-eyebrow">Coverage Area</p>
-      <h2 class="section-title">Proudly Serving the Lowcountry</h2>
-      <div class="gold-divider" style="margin: 0 0 40px;"></div>
-      <div class="cities-grid">
-        <div class="city-item">Charleston</div>
-        <div class="city-item">North Charleston</div>
-        <div class="city-item">Mount Pleasant</div>
-        <div class="city-item">Summerville</div>
-        <div class="city-item">Hanahan</div>
-        <div class="city-item">Goose Creek</div>
-        <div class="city-item">Johns Island</div>
-        <div class="city-item">James Island</div>
-        <div class="city-item">Sullivan's Island</div>
-        <div class="city-item">Isle of Palms</div>
-        <div class="city-item">Daniel Island</div>
-        <div class="city-item">Folly Beach</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA STRIP -->
-  <div class="cta-strip">
-    <h2>Appliance Down? We're Ready.</h2>
-    <p>Available same-day across the Lowcountry. Call anytime — it's free to ask.</p>
-    <a href="tel:8432788997" class="phone-link">843-278-8997</a>
-    <a href="contact.html" class="btn-dark">Schedule Service</a>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-check">✓</span> Licensed &amp; Insured</div>
+    <div class="trust-item"><span class="trust-check">✓</span> 90-Day Warranty</div>
+    <div class="trust-item"><span class="trust-check">✓</span> Same-Day Available</div>
+    <div class="trust-item"><span class="trust-check">✓</span> Emergency 24/7</div>
   </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo-main" style="font-size:22px;">Vanguard</a>
-          <p>Premier appliance repair for the Lowcountry. Factory-trained on all major brands. Licensed, insured, and backed by a 90-day warranty.</p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="service-plans.html">Service Plans</a></li>
-            <li><a href="commercial.html">Commercial</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="payment.html">Pay Invoice</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-info">
-          <h4>Contact</h4>
-          <p><a href="tel:8432788997">843-278-8997</a></p>
-          <p><a href="mailto:Service@vanguardhsllc.com">Service@vanguardhsllc.com</a></p>
-          <p style="margin-top:12px;">Mon–Sat 8am–6pm<br>Emergency: 24/7</p>
-          <p style="margin-top:12px;">Charleston, SC &amp; Lowcountry</p>
-        </div>
+<!-- WHY CHOOSE US -->
+<div class="section" style="background: var(--bg);">
+  <div class="section-inner">
+    <p class="section-eyebrow">Why Choose Vanguard</p>
+    <h2 class="section-title">Built on a Higher Standard</h2>
+    <div class="gold-rule"></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏅</div>
+        <h3>Certified Experts</h3>
+        <p>Factory-trained technicians on all major brands including luxury appliances. We know your machine — not just the basics.</p>
       </div>
-      <hr class="footer-divider">
-      <div class="footer-bottom">
-        <span>© 2026 Vanguard Home Service LLC. All rights reserved.</span>
-        <span><a href="tel:8432788997">843-278-8997</a></span>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <h3>Transparent Pricing</h3>
+        <p>Upfront estimates before any work begins. No surprise charges. You approve the repair before we touch anything.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <h3>Guaranteed Work</h3>
+        <p>90-day warranty on every repair — parts and labor. If the same issue returns within 90 days, we come back at no charge.</p>
       </div>
     </div>
-  </footer>
+  </div>
+</div>
 
-  <script src="main.js"></script>
+<!-- SERVICE AREA -->
+<div class="area-section">
+  <div class="area-inner">
+    <p class="section-eyebrow">Coverage Area</p>
+    <h2 class="section-title">Proudly Serving the Lowcountry</h2>
+    <div class="gold-rule"></div>
+    <p class="area-sub">At Vanguard Home Service LLC, we aren't just a service provider — we're your neighbors. Based right here in South Carolina, we understand the specific needs of Lowcountry homes.</p>
+    <div class="cities-wrap">
+      <span class="city-chip">Charleston</span>
+      <span class="city-chip">North Charleston</span>
+      <span class="city-chip">Mount Pleasant</span>
+      <span class="city-chip">Summerville</span>
+      <span class="city-chip">Hanahan</span>
+      <span class="city-chip">Goose Creek</span>
+      <span class="city-chip">Johns Island</span>
+      <span class="city-chip">James Island</span>
+      <span class="city-chip">Sullivan's Island</span>
+      <span class="city-chip">Isle of Palms</span>
+      <span class="city-chip">Daniel Island</span>
+      <span class="city-chip">Folly Beach</span>
+      <span class="city-chip">Moncks Corner</span>
+      <span class="city-chip">Ravenel</span>
+      <span class="city-chip">Adams Run</span>
+    </div>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <h2>Appliance Down?<br>We're Ready.</h2>
+  <p>Same-day service available across the Lowcountry. Call anytime.</p>
+  <a href="tel:8432788997" class="cta-phone">843-278-8997</a>
+  <a href="contact.html" class="cta-btn">Schedule Service Now</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo-text">Vanguard Home Service LLC</span>
+        <p>Premier appliance repair for the Lowcountry. Factory-trained on all major brands including Dacor and Speed Queen. Licensed, insured, and backed by a 90-day warranty on every repair.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="service-plans.html">Service Plans</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <h4>Contact</h4>
+        <p><a href="tel:8432788997">843-278-8997</a></p>
+        <p><a href="mailto:Service@vanguardhsllc.com">Service@vanguardhsllc.com</a></p>
+        <p style="margin-top:12px;">Mon–Sat: 8am–6pm<br>Emergency: 24/7</p>
+        <p style="margin-top:12px;">Charleston, SC &amp; Lowcountry</p>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>© 2026 Vanguard Home Service LLC. All rights reserved.</span>
+      <span>Concept preview — not the official website</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
