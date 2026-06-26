@@ -37,6 +37,10 @@ body {
 }
 .concept-banner a { color: #060e1a; font-weight: 700; text-decoration: underline; }
 
+/* ── NAV LOGO IMAGE ── */
+.nav-logo-link { display: block; text-align: center; }
+.nav-logo-img { height: 100px; width: auto; display: block; margin: 0 auto; }
+
 /* ── NAV ── */
 nav {
   background: var(--bg);
