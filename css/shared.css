@@ -26,7 +26,7 @@ a { text-decoration: none; }
 .header-logo { display: inline-block; margin-bottom: 18px; }
 .header-logo img { height: 120px; width: auto; display: block; }
 .header-contact { margin-bottom: 16px; }
-.header-phone { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
+.header-phone { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
 .header-email { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; display: block; }
 .header-social { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .header-social a { color: var(--muted); transition: color 0.15s; display: flex; align-items: center; gap: 6px; }
