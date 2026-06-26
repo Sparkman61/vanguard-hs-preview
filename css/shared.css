@@ -236,4 +236,11 @@ footer ul li a:hover { color: var(--gold); }
   .form-row { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .premier-cards { flex-direction: column; align-items: center; }
+  .site-header { flex-direction: column; align-items: center; padding: 16px 24px; text-align: center; }
+  .header-right { align-items: center; }
+  .header-social { justify-content: center; }
+  .header-phone { font-size: 26px; }
+  .hero-inner { grid-template-columns: 1fr; padding: 64px 24px; gap: 40px; }
+  .hero-left { text-align: center; }
+  .hero-phone-big { font-size: clamp(40px, 10vw, 56px); }
 }
