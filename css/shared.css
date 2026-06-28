@@ -122,7 +122,7 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
 }
 .hero-seal-stars { color:var(--gold); font-size:1rem; letter-spacing:0.08em; }
 .hero-seal-reviews { font-size:0.82rem; color:#555; font-weight:500; margin-top:0.2rem; }
-.hero-seal-list { display:flex; flex-direction:column; gap:0.9rem; }
+.hero-seal-list { display:flex; flex-direction:column; gap:0.9rem; text-align:left; }
 .hero-seal-item { display:flex; gap:0.7rem; align-items:flex-start; }
 .hero-seal-check { color:var(--gold); font-size:0.75rem; margin-top:0.2rem; flex-shrink:0; }
 .hero-seal-item b { font-weight:600; font-size:0.94rem; color:var(--bg); display:block; }
