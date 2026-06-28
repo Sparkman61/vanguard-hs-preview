@@ -24,7 +24,7 @@ a { text-decoration: none; }
 /* HEADER */
 .site-header { background: var(--bg); border-bottom: 1px solid var(--gold-border); padding: 12px 40px; display: flex; align-items: center; justify-content: space-between; }
 .header-logo { display: inline-block; }
-.header-logo img { height: 90px; width: auto; display: block; }
+.header-logo img { height: 110px; width: auto; display: block; }
 .header-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 6px; }
 .header-contact { margin-bottom: 0; }
 .header-phone { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; display: block; margin-bottom: 2px; }
