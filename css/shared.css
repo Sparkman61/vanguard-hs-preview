@@ -188,10 +188,10 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
 .plan-header--badge { padding-top: 44px; }
 .plan-card--gold .plan-header { background: var(--gold); }
 .plan-badge {
-  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
   background: var(--gold); color: var(--bg);
   font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  padding: 4px 16px; border-radius: 20px; white-space: nowrap;
+  padding: 5px 18px; border-radius: 20px; white-space: nowrap; z-index: 2;
 }
 .plan-tier-name {
   font-family: 'Cormorant Garamond', serif;
