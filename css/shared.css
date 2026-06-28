@@ -231,7 +231,7 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   transition: opacity 0.15s;
 }
 .plan-card--bronze .plan-btn { background: #b8860b; color: var(--bg); }
-.plan-card--silver .plan-btn { background: #9e9e9e; color: var(--bg); }
+.plan-card--silver .plan-btn { background: #808080; color: var(--white); }
 .plan-card--gold .plan-btn { background: var(--gold); color: var(--bg); }
 .plan-btn:hover { opacity: 0.85; }
 
