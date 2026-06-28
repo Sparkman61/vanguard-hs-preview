@@ -113,7 +113,7 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   box-shadow:0 8px 40px rgba(0,0,0,0.25); padding:1.8rem 1.6rem;
 }
 .hero-seal-top {
-  display:flex; align-items:center; gap:1rem;
+  display:flex; align-items:center; justify-content:center; gap:1rem;
   padding-bottom:1.2rem; border-bottom:1px dashed rgba(201,168,76,0.4); margin-bottom:1.2rem;
 }
 .hero-seal-score {
