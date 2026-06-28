@@ -232,7 +232,7 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   transition: opacity 0.15s;
 }
 .plan-card--bronze .plan-btn { background: linear-gradient(145deg, rgb(205,127,50), rgb(184,134,11)); color: var(--bg); }
-.plan-card--silver .plan-btn { background: #808080; color: var(--white); }
+.plan-card--silver .plan-btn { background: #b0b8c0; color: var(--bg); }
 .plan-card--gold .plan-btn { background: linear-gradient(145deg, rgb(255,215,0), rgb(212,175,55)); color: var(--bg); }
 .plan-btn:hover { opacity: 0.85; }
 
