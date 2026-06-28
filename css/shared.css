@@ -18,16 +18,16 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--whi
 a { text-decoration: none; }
 
 /* CONCEPT BANNER */
-.concept-banner { background: var(--gold); color: #07101f; text-align: center; padding: 9px 20px; font-size: 12.5px; font-weight: 600; }
+.concept-banner { background: var(--gold); color: #07101f; text-align: center; padding: 6px 20px; font-size: 12.5px; font-weight: 600; }
 .concept-banner a { color: #07101f; text-decoration: underline; font-weight: 700; }
 
 /* HEADER */
-.site-header { background: var(--bg); border-bottom: 1px solid var(--gold-border); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
+.site-header { background: var(--bg); border-bottom: 1px solid var(--gold-border); padding: 12px 40px; display: flex; align-items: center; justify-content: space-between; }
 .header-logo { display: inline-block; }
-.header-logo img { height: 140px; width: auto; display: block; }
+.header-logo img { height: 90px; width: auto; display: block; }
 .header-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 6px; }
 .header-contact { margin-bottom: 0; }
-.header-phone { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; display: block; margin-bottom: 2px; }
+.header-phone { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; display: block; margin-bottom: 2px; }
 .header-email { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; display: block; margin-bottom: 6px; }
 .header-social { display: flex; justify-content: flex-end; gap: 24px; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0; }
 .header-social a { color: var(--muted); transition: color 0.15s; display: flex; align-items: center; gap: 6px; }
@@ -39,7 +39,7 @@ nav { display: flex; align-items: center; border-top: 1px solid var(--gold-borde
 nav a { display: block; padding: 14px 22px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
 nav a:hover { color: var(--gold); }
 nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
-nav a.nav-cta { background: var(--gold); color: var(--bg); margin-left: 12px; border-bottom: 2px solid transparent; border-radius: 2px; padding: 10px 20px; margin-top: 6px; margin-bottom: 6px; font-size: 11px; }
+nav a.nav-cta { background: var(--gold); color: var(--bg) !important; border-bottom: 2px solid transparent !important; border-radius: 2px; padding: 10px 20px !important; margin-left: 12px; font-size: 13px; }
 nav a.nav-cta:hover { background: var(--gold-light); }
 
 /* HAMBURGER */
