@@ -183,10 +183,9 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
-.plan-card--bronze .plan-header { background: #b8860b; }
+.plan-card--bronze .plan-header { background: #c49a2a; }
 .plan-card--silver .plan-header { background: #b0b8c0; }
-.plan-header--badge { padding-top: 44px; }
-.plan-card--gold .plan-header { background: var(--gold); }
+.plan-card--gold .plan-header { background: #c9a84c; }
 .plan-badge {
   position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
   background: var(--gold); color: var(--bg);
@@ -231,9 +230,9 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   padding: 14px; border-radius: 6px; margin-top: auto;
   transition: opacity 0.15s;
 }
-.plan-card--bronze .plan-btn { background: #b8860b; color: var(--bg); }
+.plan-card--bronze .plan-btn { background: #c49a2a; color: var(--bg); }
 .plan-card--silver .plan-btn { background: #808080; color: var(--white); }
-.plan-card--gold .plan-btn { background: var(--gold); color: var(--bg); }
+.plan-card--gold .plan-btn { background: #c9a84c; color: var(--bg); }
 .plan-btn:hover { opacity: 0.85; }
 
 /* WHY CARDS */
