@@ -184,9 +184,9 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
-.plan-card--bronze .plan-header { background: #c8862a; }
+.plan-card--bronze .plan-header { background: linear-gradient(145deg, rgb(205,127,50), rgb(184,134,11)); }
 .plan-card--silver .plan-header { background: #b0b8c0; }
-.plan-card--gold .plan-header { background: #e8c040; }
+.plan-card--gold .plan-header { background: linear-gradient(145deg, rgb(255,215,0), rgb(212,175,55)); }
 .plan-badge {
   position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
   background: var(--gold); color: var(--bg);
@@ -231,9 +231,9 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   padding: 14px; border-radius: 6px; margin-top: auto;
   transition: opacity 0.15s;
 }
-.plan-card--bronze .plan-btn { background: #c8862a; color: var(--bg); }
+.plan-card--bronze .plan-btn { background: linear-gradient(145deg, rgb(205,127,50), rgb(184,134,11)); color: var(--bg); }
 .plan-card--silver .plan-btn { background: #808080; color: var(--white); }
-.plan-card--gold .plan-btn { background: #e8c040; color: var(--bg); }
+.plan-card--gold .plan-btn { background: linear-gradient(145deg, rgb(255,215,0), rgb(212,175,55)); color: var(--bg); }
 .plan-btn:hover { opacity: 0.85; }
 
 /* WHY CARDS */
