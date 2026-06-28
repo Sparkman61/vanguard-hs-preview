@@ -184,7 +184,8 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
   overflow: hidden;
 }
 .plan-card--bronze .plan-header { background: #b8860b; }
-.plan-card--silver .plan-header { background: #9e9e9e; }
+.plan-card--silver .plan-header { background: #b0b8c0; }
+.plan-header--badge { padding-top: 44px; }
 .plan-card--gold .plan-header { background: var(--gold); }
 .plan-badge {
   position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
