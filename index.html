@@ -60,7 +60,11 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80');"></div>
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('images/Range-image.avif');"></div>
+    <div class="hero-slide" style="background-image:url('images/laundry.webp');"></div>
+    <div class="hero-slide" style="background-image:url('images/knobs.jpg');"></div>
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-left">
@@ -73,6 +77,11 @@
       <a href="tel:8432788997" class="hero-phone-big">843-278-8997</a>
       <p class="hero-phone-label">Available 24/7 &nbsp;&middot;&nbsp; Tap to Call</p>
     </div>
+  </div>
+  <div class="hero-dots">
+    <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+    <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+    <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
   </div>
 </div>
 
@@ -211,5 +220,15 @@
 </footer>
 
   <script src="main.js"></script>
+  <script>
+    var slides=document.querySelectorAll('.hero-slide');
+    var dots=document.querySelectorAll('.hero-dot');
+    var current=0,paused=false;
+    function goTo(n){slides[current].classList.remove('active');dots[current].classList.remove('active');current=(n+slides.length)%slides.length;slides[current].classList.add('active');dots[current].classList.add('active');}
+    dots.forEach(function(dot){dot.addEventListener('click',function(){goTo(parseInt(dot.dataset.index));paused=true;setTimeout(function(){paused=false;},6000);});});
+    document.querySelector('.hero').addEventListener('mouseenter',function(){paused=true;});
+    document.querySelector('.hero').addEventListener('mouseleave',function(){paused=false;});
+    setInterval(function(){if(!paused)goTo(current+1);},5000);
+  </script>
 </body>
 </html>
