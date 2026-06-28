@@ -168,6 +168,7 @@ nav a.nav-schedule:hover { background: var(--gold-light); }
 /* PLAN CARDS */
 .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
 .plan-card {
+  position: relative;
   border-radius: 12px;
   overflow: visible;
   display: flex;
